@@ -1,0 +1,71 @@
+<!-- frase_aleatoria.html -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Frase Aleatória</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 150px;
+      background-image: url('https://img.freepik.com/fotos-premium/design-de-fundo-criativo-abstrato-de-azul-escuro-de-oxford_851755-196184.jpg?semt=ais_hybrid');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #frase {
+      margin-top: 40px;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1><u>Clique para ver uma frase aleatória:</u></h1>
+  <button onclick="mostrarFrase()">Mostrar Frase</button>
+  <p id="frase"></p>
+
+  <script>
+    const frases = [
+      "Se você faz o que todo mundo faz, você vai chegar no lugar que todo mundo chega.",
+      "O sucesso nasce do querer.",
+      "Para se destacar é preciso desprender da manada.",
+      "Não se conforme!",
+      "Não espere, faça acontecer.",
+      "O sucesso é treinável.",
+      "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+      "Não aceite conselhos construtivos de quem nunca construiu nada.",
+      "Disciplina é DECISÃO.",
+      "Lembre-se: saúde, família, trabalho. Não inverta a ordem.",
+      "Sucesso é não saber o que vai acontecer."
+    ];
+
+    function mostrarFrase() {
+      const indice = Math.floor(Math.random() * frases.length);
+      document.getElementById("frase").innerText = frases[indice];
+    }
+  </script>
+
+</body>
+
+</html>
